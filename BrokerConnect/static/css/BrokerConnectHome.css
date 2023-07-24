@@ -1,0 +1,219 @@
+/* ------------------------------Base Code----------------------------- */
+
+.web-footer,
+.navbar {
+    display: none;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap');
+
+:root {
+    /* Variable */
+    --color-selection-light: white;
+    --color-selection-dark: #461959;
+}
+
+html {
+    /* Base Property */
+    font-size: 16px;
+}
+
+* {
+    /* Common Property */
+    margin: 0;
+    padding: 0;
+    outline: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: white;
+}
+
+::selection {
+    background: var(--color-selection-light);
+    color: var(--color-selection-dark);
+}
+
+
+/* ---------------------Code Start Here------------------------ */
+
+
+.BrokerConnect-Nav {
+    display: flex;
+    justify-content: space-around;
+    padding: 0.5rem;
+    background-color: #461959;
+}
+
+.BrokerConnect-Mobile-Nav {
+    display: flex;
+    justify-content: space-around;
+}
+
+.BrokerConnect-CompanyTag {
+    font-size: 2rem;
+    color: white;
+    line-height: 1;
+}
+
+.BrokerConnect-CompanySubTag {
+    font-size: 1rem;
+    color: white;
+    text-align: right;
+    line-height: 1;
+    padding-bottom: .25rem;
+}
+
+.BrokerConnect-Nav-Button {
+    display: none;
+}
+
+@media only screen and (orientation: portrait) {
+    .BrokerConnect-Nav {
+        display: block;
+    }
+
+    .BrokerConnect-Nav-Button {
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        gap: 4px;
+        cursor: pointer;
+    }
+
+    .BrokerConnect-Nav-Button div {
+        border: 2px solid white;
+        width: 1.5rem;
+        transition: transform .3s ease;
+    }
+
+    .BrokerConnect-Nav-First {
+        transform: rotate(45deg);
+    }
+
+    .BrokerConnect-Nav-Second {
+        position: absolute;
+        transform: rotate(-45deg);
+    }
+
+    .BrokerConnect-Nav-Third {
+        display: none;
+    }
+}
+
+.BrokerConnect-List {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.BrokerConnect-List li {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    cursor: pointer;
+}
+
+.BrokerConnect-Location {
+    background-color: white;
+    color: #461959;
+    border-radius: 1.5rem;
+    padding: 0 1rem;
+    font-size: 1.5rem;
+    margin: .4rem;
+}
+
+.BrokerConnect-Location>img {
+    height: 1.5rem;
+}
+
+img.BrokerConnect-Arrow {
+    padding-left: 1.5rem;
+    height: 2rem;
+}
+
+.BrokerConnect-Filter {
+    color: white;
+    font-size: 2rem;
+}
+
+.BrokerConnect-Filter>img {
+    height: 1.5rem;
+}
+
+
+
+.BrokerConnect-Profile>img {
+    height: 3rem;
+    border-radius: 50%;
+}
+
+@media only screen and (orientation: portrait) {
+    .BrokerConnect-List {
+        flex-wrap: wrap;
+        background-color: #461959;
+        position: absolute;
+        left: 0;
+        gap: 0;
+        margin-top: .4rem;
+        padding-top: .4rem;
+        width: 100%;
+        border-top: 1px solid gray;
+        transform: scaleY(0);
+        transform-origin: top;
+        transition: transform .3s ease;
+    }
+
+    .BrokerConnect-List li {
+        display: flex;
+        justify-content: center;
+        flex: 1 1 auto;
+    }
+
+    li.BrokerConnect-Location {
+        justify-content: start;
+        padding: .4rem 1rem;
+        width: 100%;
+        order: 2;
+    }
+
+    img.BrokerConnect-Arrow {
+        padding-left: 0rem;
+        position: absolute;
+        right: 1.4rem;
+    }
+
+    .BrokerConnect-Horiental {
+        order: 1;
+        width: 100%;
+        border: none;
+        border-bottom: 1px solid gray;
+        padding-top: .4rem;
+    }
+
+    .BrokerConnect-List-click {
+        transform: scaleY(1);
+    }
+}
+
+.BrokerConnect-Flex {
+    list-style: none;
+    display: flex;
+    gap: .5rem;
+    margin: .5rem;
+}
+
+.BrokerConnect-Flex-item {
+    background-color: #461959;
+    color: white;
+    padding: .5rem;
+    border-radius: .5rem;
+}
+
+.BrokerConnect-Estate {
+    width: 250px;
+    height: 250px;
+}
