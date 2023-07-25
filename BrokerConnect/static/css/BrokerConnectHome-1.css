@@ -42,12 +42,16 @@ body {
 
 /* ---------------------Code Start Here------------------------ */
 
-
 .BrokerConnect-Mobile-Nav {
-    display: flex;
-    justify-content: space-around;
-    background-color: #461959;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+    align-items: center;
+    gap: 1rem;
     padding: .5rem;
+    background-color: black;
+    color: white;
+    font-size: 1.4rem;
 }
 
 .BrokerConnect-Nav-Button {
@@ -65,64 +69,23 @@ body {
 
 .BrokerConnect-Profile {
     height: 3rem;
+    width: 3rem;
     border-radius: 50%;
 }
 
-.BrokerConnect-List {
-    list-style: none;
-    display: flex;
-    gap: .8rem;
-    padding: .8rem;
-    border-top: 1px solid gray;
-    background-color: #461959;
-}
-
-.BrokerConnect-Location {
-    position: relative;
-    display: flex;
-    align-items: center;
-    gap: .5rem;
-    padding: .4rem 1rem;
-    cursor: pointer;
-    flex: 1 1 auto;
-    background-color: white;
-    color: #461959;
-    border-radius: 1.5rem;
-    font-size: 1.5rem;
-}
-
-.BrokerConnect-Location>img {
-    height: 1.5rem;
-}
-
-img.BrokerConnect-Arrow {
-    position: absolute;
-    right: 1.4rem;
-    height: 2rem;
-}
-
 .BrokerConnect-Filter {
-    display: flex;
-    align-items: center;
-    gap: .5rem;
-    cursor: pointer;
-    color: white;
-    font-size: 2rem;
-}
-
-.BrokerConnect-Filter>img {
     height: 1.5rem;
 }
 
 .BrokerConnect-footer {
-    position: absolute;
+    position: fixed;
     bottom: 0;
     width: 100%;
     display: flex;
     padding-top: .25rem;
-    background-color: #461959;
+    background-color: black;
     color: white;
-    font-size: 1.5rem;
+    font-size: .75rem;
 }
 
 .BrokerConnect-footer ul {
