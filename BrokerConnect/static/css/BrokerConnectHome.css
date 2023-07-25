@@ -170,7 +170,7 @@ img.BrokerConnect-Arrow {
     .BrokerConnect-List li {
         display: flex;
         justify-content: center;
-        flex: 1 1 auto;
+        flex: 1 1 45%;
     }
 
     li.BrokerConnect-Location {
