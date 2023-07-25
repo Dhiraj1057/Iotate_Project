@@ -44,10 +44,10 @@ body {
 
 .BrokerConnect-Mobile-Nav {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: 1fr repeat(2, minmax(0, 1fr)) 1fr;
     justify-items: center;
     align-items: center;
-    gap: 1rem;
+    row-gap: 1rem;
     padding: .5rem;
     background-color: black;
     color: white;
