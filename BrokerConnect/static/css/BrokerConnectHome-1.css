@@ -73,19 +73,55 @@ body {
     border-radius: 50%;
 }
 
-.BrokerConnect-Filter {
-    height: 1.5rem;
+.BrokerConnect-Nav-filter {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    cursor: pointer;
+}
+
+.BrokerConnect-Nav-filter-First {
+    border: 1px solid white;
+    width: 1.5rem;
+}
+
+.BrokerConnect-Nav-filter-Second {
+    border: 1px solid white;
+    width: 1rem;
+}
+
+.BrokerConnect-Nav-filter-Third {
+    border: 1px solid white;
+    width: .5rem;
+}
+
+.BrokerConnect-Section {
+    display: flex;
+    flex-flow: column;
+    background-color: black;
+    border-top: 1px solid #80808040;
+}
+
+.BrokerConnect-Housing-data {
+    flex: 0 0 auto;
+    border-bottom: 1px solid #80808040;
+}
+
+.BrokerConnect-Img {
+    height: 100px;
 }
 
 .BrokerConnect-footer {
-    position: fixed;
+    position: sticky;
     bottom: 0;
     width: 100%;
     display: flex;
     padding-top: .25rem;
-    background-color: black;
+    background-color: rgb(27, 27, 27);
     color: white;
-    font-size: .75rem;
+    font-size: .6rem;
 }
 
 .BrokerConnect-footer ul {
