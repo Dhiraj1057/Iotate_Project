@@ -1,11 +1,11 @@
 /* ------------------------------Base Code----------------------------- */
 
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap');
+
 .web-footer,
 .navbar {
     display: none;
 }
-
-@import url('https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap');
 
 :root {
     /* Variable */
