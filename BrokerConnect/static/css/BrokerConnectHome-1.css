@@ -1,0 +1,139 @@
+/* ------------------------------Base Code----------------------------- */
+
+.web-footer,
+.navbar {
+    display: none;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;600;800&display=swap');
+
+:root {
+    /* Variable */
+    --color-selection-light: white;
+    --color-selection-dark: #461959;
+}
+
+html {
+    /* Base Property */
+    font-size: 16px;
+}
+
+* {
+    /* Common Property */
+    margin: 0;
+    padding: 0;
+    outline: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    /* font-family: 'Inconsolata', monospace; */
+}
+
+body {
+    background: white;
+}
+
+::selection {
+    background: var(--color-selection-light);
+    color: var(--color-selection-dark);
+}
+
+
+/* ---------------------Code Start Here------------------------ */
+
+
+.BrokerConnect-Mobile-Nav {
+    display: flex;
+    justify-content: space-around;
+    background-color: #461959;
+    padding: .5rem;
+}
+
+.BrokerConnect-Nav-Button {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    gap: 4px;
+    cursor: pointer;
+}
+
+.BrokerConnect-Nav-Button div {
+    border: 2px solid white;
+    width: 1.5rem;
+}
+
+.BrokerConnect-Profile {
+    height: 3rem;
+    border-radius: 50%;
+}
+
+.BrokerConnect-List {
+    list-style: none;
+    display: flex;
+    gap: .8rem;
+    padding: .8rem;
+    border-top: 1px solid gray;
+    background-color: #461959;
+}
+
+.BrokerConnect-Location {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    padding: .4rem 1rem;
+    cursor: pointer;
+    flex: 1 1 auto;
+    background-color: white;
+    color: #461959;
+    border-radius: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.BrokerConnect-Location>img {
+    height: 1.5rem;
+}
+
+img.BrokerConnect-Arrow {
+    position: absolute;
+    right: 1.4rem;
+    height: 2rem;
+}
+
+.BrokerConnect-Filter {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    cursor: pointer;
+    color: white;
+    font-size: 2rem;
+}
+
+.BrokerConnect-Filter>img {
+    height: 1.5rem;
+}
+
+.BrokerConnect-footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    padding-top: .25rem;
+    background-color: #461959;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.BrokerConnect-footer ul {
+    list-style: none;
+    flex: 1 1 50%;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+.BrokerConnect-footer ul img {
+    background-color: white;
+    width: 2rem;
+}
