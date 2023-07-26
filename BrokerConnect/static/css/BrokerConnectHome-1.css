@@ -1,7 +1,6 @@
 /* ------------------------------Base Code----------------------------- */
 
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;600;800&display=swap');
 
 .web-footer,
 .navbar {
@@ -11,7 +10,9 @@
 :root {
     /* Variable */
     --color-selection-light: white;
-    --color-selection-dark: #461959;
+    --color-selection-dark: black;
+    --color-footer-dark: #1b1b1b;
+    --color-line-section: #80808040;
 }
 
 html {
@@ -27,11 +28,11 @@ html {
     text-decoration: none;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
-    /* font-family: 'Inconsolata', monospace; */
+    color: var(--color-selection-light);
 }
 
 body {
-    background: white;
+    background-color: var(--color-selection-dark);
 }
 
 ::selection {
@@ -42,19 +43,17 @@ body {
 
 /* ---------------------Code Start Here------------------------ */
 
-.BrokerConnect-Mobile-Nav {
+.BrokerConnect-Home-Mobile-Nav {
     display: grid;
     grid-template-columns: 1fr repeat(2, minmax(0, 1fr)) 1fr;
     justify-items: center;
     align-items: center;
     row-gap: 1rem;
     padding: .5rem;
-    background-color: black;
-    color: white;
     font-size: 1.4rem;
 }
 
-.BrokerConnect-Nav-Button {
+.BrokerConnect-Home-Nav-Button {
     display: flex;
     flex-flow: column;
     justify-content: center;
@@ -62,18 +61,18 @@ body {
     cursor: pointer;
 }
 
-.BrokerConnect-Nav-Button div {
-    border: 2px solid white;
+.BrokerConnect-Home-Nav-Button div {
+    border: 2px solid var(--color-selection-light);
     width: 1.5rem;
 }
 
-.BrokerConnect-Profile {
+.BrokerConnect-Home-Profile {
     height: 3rem;
     width: 3rem;
     border-radius: 50%;
 }
 
-.BrokerConnect-Nav-filter {
+.BrokerConnect-Home-Nav-filter {
     display: flex;
     flex-flow: column;
     justify-content: center;
@@ -82,49 +81,47 @@ body {
     cursor: pointer;
 }
 
-.BrokerConnect-Nav-filter-First {
-    border: 1px solid white;
+.BrokerConnect-Home-Nav-filter-First {
+    border: 1px solid var(--color-selection-light);
     width: 1.5rem;
 }
 
-.BrokerConnect-Nav-filter-Second {
-    border: 1px solid white;
+.BrokerConnect-Home-Nav-filter-Second {
+    border: 1px solid var(--color-selection-light);
     width: 1rem;
 }
 
-.BrokerConnect-Nav-filter-Third {
-    border: 1px solid white;
+.BrokerConnect-Home-Nav-filter-Third {
+    border: 1px solid var(--color-selection-light);
     width: .5rem;
 }
 
-.BrokerConnect-Section {
+.BrokerConnect-Home-Section {
     display: flex;
     flex-flow: column;
-    background-color: black;
-    border-top: 1px solid #80808040;
+    border-top: 1px solid var(--color-line-section);
 }
 
-.BrokerConnect-Housing-data {
+.BrokerConnect-Home-Housing-data {
     flex: 0 0 auto;
-    border-bottom: 1px solid #80808040;
+    border-bottom: 1px solid var(--color-line-section);
 }
 
-.BrokerConnect-Img {
+.BrokerConnect-Home-Img {
     height: 100px;
 }
 
-.BrokerConnect-footer {
+.BrokerConnect-Home-footer {
     position: sticky;
     bottom: 0;
     width: 100%;
     display: flex;
     padding-top: .25rem;
-    background-color: rgb(27, 27, 27);
-    color: white;
+    background-color: var(--color-footer-dark);
     font-size: .6rem;
 }
 
-.BrokerConnect-footer ul {
+.BrokerConnect-Home-footer ul {
     list-style: none;
     flex: 1 1 50%;
     display: flex;
@@ -132,7 +129,7 @@ body {
     align-items: center;
 }
 
-.BrokerConnect-footer ul img {
-    background-color: white;
+.BrokerConnect-Home-footer ul img {
+    background-color: var(--color-selection-light);
     width: 2rem;
 }
