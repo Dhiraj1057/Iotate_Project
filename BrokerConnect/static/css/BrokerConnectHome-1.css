@@ -112,7 +112,7 @@ body {
 }
 
 .BrokerConnect-Home-footer {
-    position: sticky;
+    position: fixed;
     bottom: 0;
     width: 100%;
     display: flex;
@@ -127,6 +127,7 @@ body {
     display: flex;
     flex-flow: column;
     align-items: center;
+    margin-bottom: 0;
 }
 
 .BrokerConnect-Home-footer ul img {

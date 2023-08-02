@@ -184,7 +184,7 @@ div.BrokerConnect-Profile-Profile {
 }
 
 .BrokerConnect-Home-footer {
-    position: sticky;
+    position: fixed;
     bottom: 0;
     width: 100%;
     display: flex;
@@ -199,6 +199,7 @@ div.BrokerConnect-Profile-Profile {
     display: flex;
     flex-flow: column;
     align-items: center;
+    margin-bottom: 0;
 }
 
 .BrokerConnect-Home-footer ul img {
