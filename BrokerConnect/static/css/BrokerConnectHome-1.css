@@ -105,10 +105,28 @@ body {
 .BrokerConnect-Home-Housing-data {
     flex: 0 0 auto;
     border-bottom: 1px solid var(--color-line-section);
+    display: flex;
+    align-items: start;
+    padding: .5rem;
 }
 
-.BrokerConnect-Home-Img {
-    height: 100px;
+.BrokerConnect-Home-Housing-data>img {
+    flex: 0 0 auto;
+    height: 6rem;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background-color: gray;
+}
+
+.BrokerConnect-Home-Housing-data>div>div>div>img {
+    height: .85rem;
+    padding-right: .25rem;
+}
+
+.BrokerConnect-Home-Housing-data>div>div {
+    display: flex;
+    gap: .5rem;
+    padding-left: .5rem;
 }
 
 .BrokerConnect-Home-footer {
