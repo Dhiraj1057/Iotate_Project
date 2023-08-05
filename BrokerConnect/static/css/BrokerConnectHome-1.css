@@ -213,6 +213,35 @@ body {
     font-size: 1rem;
 }
 
+.BrokerConnect-Home-Input ul {
+    list-style: none;
+    position: absolute;
+    transform: translate(0, 3rem) scaleY(1);
+    max-height: 135px;
+    width: calc(80% - 1rem);
+    overflow: auto;
+    transform-origin: top;
+    transition: transform 0.3s ease 0.3s;
+    z-index: 2;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.BrokerConnect-Home-Input ul li {
+    flex-grow: 1;
+    min-width: 50%;
+    background: black;
+    color: white;
+    border-radius: .25rem;
+    padding: .25rem .5rem;
+    border: 1px solid white;
+    cursor: pointer;
+}
+
+.BrokerConnect-Home-Input input:not(:focus)~ul {
+    transform: translate(0, 3rem) scaleY(0);
+}
+
 .BrokerConnect-Home-Button {
     background-color: black;
     width: max-content;
