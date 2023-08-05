@@ -82,7 +82,7 @@ document.addEventListener("readystatechange", function () {
         })
 
         document.querySelectorAll(".BrokerConnect-Home-Input input")[1].addEventListener("click", event => {
-            ActivateSelection(event.target.parentNode)
+            deactivateSelection(event.target.parentNode)
             event.target.parentNode.querySelectorAll("li").forEach(element => element.remove());
             let value = document.querySelector(".BrokerConnect-Home-Input input").value
             let url = `https://brokerconnect.frappe.cloud/api/resource/District?filters=[["state", "=", "${value}"]]`;
@@ -98,7 +98,7 @@ document.addEventListener("readystatechange", function () {
             } catch (error) {
                 console.log(error);
             }
-            deactivateSelection(event.target.parentNode)
+            ActivateSelection(event.target.parentNode)
         })
 
         document.querySelectorAll(".BrokerConnect-Home-Input input").forEach(element => {
