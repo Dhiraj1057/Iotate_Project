@@ -71,10 +71,12 @@ document.addEventListener("readystatechange", function () {
         document.querySelector(".BrokerConnect-Home-Mobile-Nav .BrokerConnect-Home-Nav-filter").addEventListener("click", (e) => {
             clearForm();
             document.querySelector(".BrokerConnect-Home-filter-Section").classList.remove("BrokerConnect-Home-filter-Section-Toggle")
+            document.body.classList.add("body-overflow-hidden")
         })
 
         document.querySelector(".BrokerConnect-Home-filter-Section>div").addEventListener("click", (e) => {
             document.querySelector(".BrokerConnect-Home-filter-Section").classList.add("BrokerConnect-Home-filter-Section-Toggle")
+            document.body.classList.remove("body-overflow-hidden")
         })
 
         document.querySelectorAll(".BrokerConnect-Home-Input ul li").forEach(element => {

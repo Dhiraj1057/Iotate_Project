@@ -36,6 +36,10 @@ body {
     background-color: var(--color-selection-dark);
 }
 
+.body-overflow-hidden {
+    overflow: hidden;
+}
+
 ::selection {
     background: var(--color-selection-light);
     color: var(--color-selection-dark);
