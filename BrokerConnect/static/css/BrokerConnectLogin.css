@@ -58,7 +58,7 @@ body {
     position: absolute;
     top: 0;
     z-index: 1;
-    background-color: #ffffffd0;
+    background-color: #ffffff40;
     transform-origin: left;
     transition: transform .3s ease;
 }
@@ -114,13 +114,15 @@ body {
     line-height: 1;
     pointer-events: none;
     transition: all 0.3s ease;
+    background-color: var(--color-selection-dark);
+    padding: 0 .25rem;
 }
 
 .BrokerConnect-Home-Input>input:focus~label,
 .BrokerConnect-Home-Input>input:valid~label,
 .BrokerConnect-Home-Input>textarea:focus~label,
 .BrokerConnect-Home-Input>textarea:valid~label {
-    transform: translate(.5rem, .25rem);
+    transform: translate(.5rem, -0.4rem);
     font-size: .75rem;
 }
 

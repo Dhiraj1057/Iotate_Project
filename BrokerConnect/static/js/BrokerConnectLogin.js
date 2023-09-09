@@ -8,6 +8,11 @@ document.addEventListener("readystatechange", function () {
             document.querySelector(".BrokerConnect-Home-filter-Section").classList.add("BrokerConnect-Home-filter-Section-Toggle")
             document.body.classList.remove("body-overflow-hidden")
         })
+
+        document.querySelectorAll(".BrokerConnect-Home-Sign-In-Section .BrokerConnect-Home-Button")[1].addEventListener("click", (e) => {
+            document.querySelector(".BrokerConnect-Home-filter-Section").classList.remove("BrokerConnect-Home-filter-Section-Toggle")
+            document.body.classList.add("body-overflow-hidden")
+        })
     } else if (this.readyState === "complete") {
         // code here
     }
