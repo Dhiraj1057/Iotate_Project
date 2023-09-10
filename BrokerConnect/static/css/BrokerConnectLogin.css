@@ -1,6 +1,6 @@
 /* ------------------------------Base Code----------------------------- */
 
-@import url('https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,600&display=swap');
 
 .web-footer,
 .navbar {
@@ -9,15 +9,18 @@
 
 :root {
     /* Variable */
-    --color-selection-light: white;
-    --color-selection-dark: black;
-    --color-footer-dark: #1b1b1b;
-    --color-line-section: #80808040;
+    --color-light: white;
+    --color-light-nearby: #93B1A6;
+    --color-dark: black;
+    --color-Sign-In: #1877f2;
+    --color-Sign-Out: #00a400;
+    ;
 }
 
 html {
     /* Base Property */
     font-size: 16px;
+    height: 100%;
 }
 
 * {
@@ -28,11 +31,11 @@ html {
     text-decoration: none;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
-    color: var(--color-selection-light);
+    color: var(--color-light);
 }
 
 body {
-    background-color: var(--color-selection-dark);
+    background-color: var(--color-dark);
 }
 
 .body-overflow-hidden {
@@ -40,15 +43,13 @@ body {
 }
 
 ::selection {
-    background: var(--color-selection-light);
-    color: var(--color-selection-dark);
+    background: var(--color-light);
+    color: var(--color-dark);
 }
 
+/* -----------------------Common Code-------------------------- */
 
-/* ---------------------Code Start Here------------------------ */
-
-.BrokerConnect-Home-filter-Section,
-.BrokerConnect-Home-Sign-In-Section {
+.BrokerConnect-Login-Section {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -58,127 +59,149 @@ body {
     position: absolute;
     top: 0;
     z-index: 1;
+}
+
+.BrokerConnect-Login-Section>form {
+    background-color: var(--color-dark);
+    display: flex;
+    flex-flow: column;
+    gap: .75rem;
+    padding: .5rem;
+    width: min(80%, 350px);
+    border-radius: .25rem;
+    border: 1px solid var(--color-light);
+}
+
+.BrokerConnect-Login-Input {
+    display: flex;
+}
+
+.BrokerConnect-Login-Input>input,
+.BrokerConnect-Login-Input>textarea {
+    background-color: var(--color-dark);
+    width: 100%;
+    border-radius: .25rem;
+    border: 1px solid var(--color-light);
+    padding: .5rem .75rem .5rem;
+    font-size: 1rem;
+}
+
+.BrokerConnect-Login-Input>label {
+    position: absolute;
+    transform: translate(.5rem, .75rem);
+    font-size: 1rem;
+    line-height: 1;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    background-color: var(--color-dark);
+    padding: 0 .25rem;
+    color: var(--color-light);
+    font-weight: 200;
+}
+
+.BrokerConnect-Login-Input>input:focus~label,
+.BrokerConnect-Login-Input>input:valid~label,
+.BrokerConnect-Login-Input>textarea:focus~label,
+.BrokerConnect-Login-Input>textarea:valid~label {
+    transform: translate(.5rem, -0.5rem);
+    font-size: .75rem;
+    color: var(--color-light-nearby);
+    font-weight: 400;
+}
+
+.BrokerConnect-Login-Input>input:focus,
+.BrokerConnect-Login-Input>input:valid,
+.BrokerConnect-Login-Input>textarea:focus,
+.BrokerConnect-Login-Input>textarea:valid {
+    border: 1px solid var(--color-light-nearby);
+}
+
+.BrokerConnect-Login-Button {
+    width: 100%;
+    padding: .5rem;
+    border: 1px solid var(--color-light);
+    border-radius: .25rem;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.BrokerConnect-Login-Sign-In {
+    background-color: var(--color-Sign-In);
+}
+
+.BrokerConnect-Login-Sign-Out {
+    background-color: var(--color-Sign-Out);
+}
+
+.BrokerConnect-Login-Input ul {
+    list-style: none;
+    position: absolute;
+    transform: translate(0, 3rem) scaleY(1);
+    max-height: 135px;
+    width: min(calc(80% - 1rem - 2px), calc(350px - 1rem - 2px));
+    overflow: auto;
+    transform-origin: top;
+    transition: transform 0.3s ease 0.3s;
+    z-index: 2;
+    box-shadow: 2px 2px 5px var(--color-light-nearby), -2px 2px 5px var(--color-light-nearby);
+}
+
+.BrokerConnect-Login-Input ul li {
+    background: var(--color-dark);
+    color: var(--color-light-nearby);
+    border-radius: .25rem;
+    padding: .25rem .75rem;
+    border: 1px solid var(--color-light-nearby);
+    cursor: pointer;
+}
+
+.BrokerConnect-Login-Input input:not(:focus)~ul {
+    transform: translate(0, 3rem) scaleY(0);
+}
+
+/* ---------------------Code Start Here------------------------ */
+
+.BrokerConnect-Login-Sign-In-Section {
+    background-color: var(--color-dark);
+}
+
+.BrokerConnect-Login-Forgot {
+    text-align: center;
+    cursor: pointer;
+    color: var(--color-Sign-In);
+}
+
+.BrokerConnect-Login-Forgot:hover {
+    text-decoration: underline;
+}
+
+.BrokerConnect-Login-Section form hr {
+    border: none;
+    border-top: 1px solid var(--color-light);
+    margin: .5rem 0;
+}
+
+.BrokerConnect-Login-Sign-Out-Section {
     background-color: #ffffff40;
     transform-origin: left;
     transition: transform .3s ease;
 }
 
-.BrokerConnect-Home-Sign-In-Section {
-    background-color: black;
-}
-
-.BrokerConnect-Home-filter-Section-Toggle {
+.BrokerConnect-Login-Sign-Out-Section-Toggle {
     transform: scaleX(0);
 }
 
-.BrokerConnect-Home-filter-Section>div {
+.BrokerConnect-Login-Input>textarea {
+    resize: none;
+    overflow: visible;
+}
+
+.BrokerConnect-Login-Sign-Out-Section>div {
     position: absolute;
     right: .75rem;
     top: .75rem;
     font-size: 1.4rem;
     line-height: 1;
     color: black;
-    cursor: pointer;
-}
-
-.BrokerConnect-Home-filter-Section>form,
-.BrokerConnect-Home-Sign-In-Section>form {
-    background-color: black;
-    display: flex;
-    flex-flow: column;
-    gap: .5rem;
-    padding: .5rem;
-    width: min(80%, 400px);
-    border-radius: .25rem;
-}
-
-.BrokerConnect-Home-Sign-In-Section>form {
-    border: 1px solid white;
-}
-
-.BrokerConnect-Home-Text {
-    display: flex;
-    gap: .25rem;
-    font-size: 1.4rem;
-    margin-bottom: .25rem;
-}
-
-.BrokerConnect-Home-Input {
-    display: flex;
-}
-
-.BrokerConnect-Home-Input>label {
-    position: absolute;
-    transform: translate(.5rem, .75rem);
-    font-size: 1.5rem;
-    line-height: 1;
-    pointer-events: none;
-    transition: all 0.3s ease;
-    background-color: var(--color-selection-dark);
-    padding: 0 .25rem;
-}
-
-.BrokerConnect-Home-Input>input:focus~label,
-.BrokerConnect-Home-Input>input:valid~label,
-.BrokerConnect-Home-Input>textarea:focus~label,
-.BrokerConnect-Home-Input>textarea:valid~label {
-    transform: translate(.5rem, -0.4rem);
-    font-size: .75rem;
-}
-
-.BrokerConnect-Home-Input>input,
-.BrokerConnect-Home-Input>textarea {
-    background-color: black;
-    height: 3rem;
-    width: 100%;
-    border-radius: .25rem;
-    border: 1px solid white;
-    padding: .75rem .5rem .25rem;
-    font-size: 1rem;
-}
-
-.BrokerConnect-Home-Input>textarea {
-    resize: none;
-    height: initial;
-}
-
-.BrokerConnect-Home-Input ul {
-    list-style: none;
-    position: absolute;
-    transform: translate(0, 3rem) scaleY(1);
-    max-height: 135px;
-    width: calc(80% - 1rem);
-    overflow: auto;
-    transform-origin: top;
-    transition: transform 0.3s ease 0.3s;
-    z-index: 2;
-    display: flex;
-    flex-wrap: wrap;
-    box-shadow: 2px 2px 5px white, -2px 2px 5px white;
-}
-
-.BrokerConnect-Home-Input ul li {
-    flex-grow: 1;
-    min-width: 50%;
-    background: black;
-    color: white;
-    border-radius: .25rem;
-    padding: .25rem .5rem;
-    border: 1px solid white;
-    cursor: pointer;
-}
-
-.BrokerConnect-Home-Input input:not(:focus)~ul {
-    transform: translate(0, 3rem) scaleY(0);
-}
-
-.BrokerConnect-Home-Button {
-    background-color: black;
-    width: 100%;
-    padding: .5rem;
-    margin-top: .5rem;
-    border: 1px solid white;
-    border-radius: .25rem;
-    font-size: 1rem;
     cursor: pointer;
 }
