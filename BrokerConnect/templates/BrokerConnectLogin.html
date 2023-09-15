@@ -14,14 +14,14 @@
         <form>
             <div>Let Dive In</div>
             <div class="BrokerConnect-Login-Input">
-                <input type="text" required>
+                <input type="email" required>
                 <label for="">Email</label>
                 <ul>
                     <!-- <li>UUYGUGU</li> -->
                 </ul>
             </div>
             <div class="BrokerConnect-Login-Input">
-                <input type="text" required>
+                <input type="password" required>
                 <label for="">Password</label>
             </div>
             <button type="button" class="BrokerConnect-Login-Button BrokerConnect-Login-Sign-In">Sign In</button>
@@ -33,7 +33,7 @@
 
     <section
         class="BrokerConnect-Login-Section BrokerConnect-Login-Sign-Out-Section BrokerConnect-Login-Sign-Out-Section-Toggle">
-        <div>✕</div>
+        <div class="BrokerConnect-Login-Corner">✕</div>
         <form>
             <div>It's quick and easy.</div>
             <div class="BrokerConnect-Login-Input">
@@ -45,11 +45,11 @@
                 <label for="">Gender</label>
             </div>
             <div class="BrokerConnect-Login-Input">
-                <input type="text" required>
+                <input type="text" onfocus="(this.type='date')" onblur="if(!this.value)this.type='text'" required>
                 <label for="">Date of birth</label>
             </div>
             <div class="BrokerConnect-Login-Input">
-                <input type="text" required>
+                <input type="email" required>
                 <label for="">Email</label>
             </div>
             <div class="BrokerConnect-Login-Input">
@@ -64,8 +64,12 @@
                 <textarea rows="2" required></textarea>
                 <label for="">Address</label>
             </div>
-            <button type="button" class="BrokerConnect-Login-Button" style="background-color: #00a400;">Sign Up</button>
+            <button type="button" class="BrokerConnect-Login-Button BrokerConnect-Login-Sign-Out">Sign Up</button>
         </form>
+    </section>
+    <section
+        class="BrokerConnect-Login-Section BrokerConnect-Login-Sign-Out-Success BrokerConnect-Login-Sign-Out-Section-Toggle">
+        <div>Verify Your email</div>
     </section>
 </body>
 

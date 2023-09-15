@@ -142,7 +142,6 @@ body {
     overflow: auto;
     transform-origin: top;
     transition: transform 0.3s ease 0.3s;
-    z-index: 2;
     box-shadow: 2px 2px 5px var(--color-light-nearby), -2px 2px 5px var(--color-light-nearby);
 }
 
@@ -185,6 +184,7 @@ body {
     background-color: #ffffff40;
     transform-origin: left;
     transition: transform .3s ease;
+    z-index: 2;
 }
 
 .BrokerConnect-Login-Sign-Out-Section-Toggle {
@@ -196,12 +196,19 @@ body {
     overflow: visible;
 }
 
-.BrokerConnect-Login-Sign-Out-Section>div {
+.BrokerConnect-Login-Sign-Out-Section>.BrokerConnect-Login-Corner {
     position: absolute;
     right: .75rem;
     top: .75rem;
     font-size: 1.4rem;
     line-height: 1;
-    color: black;
+    color: var(--color-dark);
     cursor: pointer;
+}
+
+.BrokerConnect-Login-Sign-Out-Success {
+    background-color: var(--color-dark);
+    transform-origin: left;
+    transition: transform .3s ease;
+    z-index: 2;
 }
