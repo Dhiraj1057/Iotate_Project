@@ -1,4 +1,9 @@
-BrokerConnect/package.json
+.idea
+
 BrokerConnect/node_modules
 BrokerConnect/package-lock.json
-.idea
+BrokerConnect/package.json
+
+FlareSens/node_modules
+FlareSens/package-lock.json
+FlareSens/package.json
