@@ -169,7 +169,7 @@
     border-radius: .5rem;
     background-image: linear-gradient(to top, #1f2937, #475569);
     color: rgb(241 245 249);
-    border: 1px;
+    border: 1px solid white;
     font-size: calc(14px + .3vw);
 }
 
@@ -178,10 +178,14 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border-right-width: 1px;
+    border-right: 1px solid white;
 }
 
 .FlareSens-Section-4>div>button {
+    font-size: 1rem;
     font-weight: 700;
     padding: 0.25rem;
+    background-color: transparent;
+    border: none;
+    outline: none;
 }
