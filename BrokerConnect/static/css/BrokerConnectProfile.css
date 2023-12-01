@@ -35,6 +35,10 @@ body {
     background-color: var(--color-selection-dark);
 }
 
+.body-overflow-hidden {
+    overflow: hidden;
+}
+
 ::selection {
     background: var(--color-selection-light);
     color: var(--color-selection-dark);
@@ -42,6 +46,61 @@ body {
 
 
 /* ---------------------Code Start Here------------------------ */
+
+.BrokerConnect-Profile-Edit-Pic {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    flex-flow: column;
+    background-color: black;
+}
+
+.BrokerConnect-Profile-Edit-Pic-toggle {
+    display: none;
+}
+
+.BrokerConnect-Profile-canvas {
+    flex: 1 1 auto;
+    margin: .5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.BrokerConnect-Profile-Crop {
+    border: 2px dashed black;
+    position: absolute;
+    background-color: transparent;
+}
+
+.BrokerConnect-Profile-Button {
+    flex: 0 0 auto;
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    gap: .5rem .5rem;
+    margin: .5rem;
+}
+
+.BrokerConnect-Profile-Button div {
+    font-size: 1.2rem;
+    line-height: 1;
+    display: flex;
+    gap: .5rem;
+}
+
+.BrokerConnect-Profile-Button div span {
+    flex: 1 1 auto;
+    border: 1px solid white;
+    border-radius: .25rem;
+    font-size: 1rem;
+    line-height: 1;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+}
 
 .BrokerConnect-Profile-Mobile-Nav {
     display: flex;
@@ -63,7 +122,6 @@ div.BrokerConnect-Profile-Profile {
     background-color: white;
     border: none;
     border-radius: .25rem;
-    box-shadow: 3px 3px rgb(47, 47, 47);
     color: black;
     cursor: pointer;
     font-size: 1rem;
@@ -74,8 +132,17 @@ div.BrokerConnect-Profile-Profile {
     background-color: #dddddd;
 }
 
-.BrokerConnect-Profile-Edit:active {
-    box-shadow: -3px -3px rgb(47, 47, 47);
+.BrokerConnect-Profile-Edit-Toggle {
+    background-color: green;
+    color: white;
+}
+
+.BrokerConnect-Profile-Edit-Toggle:hover {
+    background-color: rgb(0, 85, 0);
+}
+
+.BrokerConnect-Profile-Edit:focus {
+    outline: none;
 }
 
 .BrokerConnect-Profile-ProfilePic {
@@ -90,6 +157,77 @@ div.BrokerConnect-Profile-Profile {
     width: calc(6.25rem + 4px);
     aspect-ratio: 1 / 1;
     border-radius: 50%;
+}
+
+.BrokerConnect-Profile-Change-Pic {
+    position: absolute;
+    width: calc(6.25rem + 4px);
+    height: calc(6.25rem + 4px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.BrokerConnect-Profile-Change-Pic:active {
+    -webkit-tap-highlight-color: transparent;
+}
+
+.BrokerConnect-Profile-Change-Pic small {
+    font-size: .8rem;
+    line-height: 1;
+    padding-right: .25rem;
+    font-weight: 500;
+}
+
+.BrokerConnect-Profile-Change-Pic:not(:hover) small {
+    visibility: hidden;
+}
+
+.BrokerConnect-Profile-Change-Pic:not(:hover) .BrokerConnect-Profile-Label {
+    visibility: hidden;
+}
+
+.BrokerConnect-Profile-Change-Pic>small:hover {
+    text-decoration: underline;
+}
+
+.BrokerConnect-Profile-Change-Pic small span {
+    position: relative;
+    left: .25rem;
+    top: .8rem;
+    border-left: .35rem solid transparent;
+    border-right: .35rem solid transparent;
+    border-top: .4rem solid white;
+}
+
+.BrokerConnect-Profile-Label {
+    position: absolute;
+    transform: translate(2.5rem, 2.5rem);
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    border-radius: .25rem;
+}
+
+.BrokerConnect-Profile-Label-toggle {
+    display: none;
+}
+
+.BrokerConnect-Profile-Label label {
+    color: white;
+    font-size: 1rem;
+    padding: .5rem;
+    cursor: pointer;
+    border-radius: .25rem;
+}
+
+.BrokerConnect-Profile-Label label:hover {
+    background-color: rgb(54, 54, 54);
+}
+
+.BrokerConnect-Profile-Label label>input {
+    display: none;
 }
 
 .BrokerConnect-Profile-Input label {
@@ -107,6 +245,9 @@ div.BrokerConnect-Profile-Profile {
     padding: .5rem;
     margin: .5rem;
     margin-right: 0;
+    font-family: 'Poppins', sans-serif;
+    line-height: normal;
+    font-size: .85rem;
 }
 
 .BrokerConnect-Profile-Input-Width-Half-1 {
@@ -193,7 +334,7 @@ div.BrokerConnect-Profile-Profile {
     font-size: .6rem;
 }
 
-.BrokerConnect-Home-footer ul {
+.BrokerConnect-Home-footer a {
     list-style: none;
     flex: 1 1 50%;
     display: flex;
@@ -202,7 +343,7 @@ div.BrokerConnect-Profile-Profile {
     margin-bottom: 0;
 }
 
-.BrokerConnect-Home-footer ul img {
+.BrokerConnect-Home-footer a img {
     background-color: var(--color-selection-light);
     width: 2rem;
 }

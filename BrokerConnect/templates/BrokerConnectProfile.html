@@ -2,14 +2,36 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../static/css/BrokerConnectProfile.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../static/css/BrokerConnectProfile.css" />
     <script src="../static/js/BrokerConnectProfile.js"></script>
     <title>Profile</title>
 </head>
 
 <body>
+    <div class="BrokerConnect-Profile-Edit-Pic BrokerConnect-Profile-Edit-Pic-toggle">
+        <div class="BrokerConnect-Profile-canvas">
+            <canvas class="BrokerConnect-Profile-canvas-image">Please Update or change browser. Your browser doesn't
+                support canvas
+                element</canvas>
+            <canvas width="150" height="150" class="BrokerConnect-Profile-Crop">Please Update or change browser. Your
+                browser doesn't support canvas
+                element</canvas>
+        </div>
+        <div class="BrokerConnect-Profile-Button">
+            <div>Zoom</div>
+            <div zoom="1"><span>+</span><span>-</span><span>Reset</span><span>Crop</span></div>
+            <div>Brightness</div>
+            <input type="range" min="0" max="200" />
+            <div>Saturation</div>
+            <input type="range" min="0" max="200" />
+            <div>Blur</div>
+            <input type="range" min="0" max="25" />
+            <div>Inversion</div>
+            <input type="range" min="0" max="100" />
+        </div>
+    </div>
     <div class="BrokerConnect-Profile-Mobile-Nav">
         <div class="BrokerConnect-Profile-Profile">Profile</div>
         <div></div>
@@ -17,22 +39,29 @@
         <button type="button" class="BrokerConnect-Profile-Edit">Edit</button>
     </div>
     <div class="BrokerConnect-Profile-ProfilePic">
-        <img src="../static/image/Dhiraj.jpg" alt="">
+        <img src="../static/image/Dhiraj.jpg" alt="" />
+        <div class="BrokerConnect-Profile-Change-Pic">
+            <small>Change<span></span></small>
+            <div class="BrokerConnect-Profile-Label BrokerConnect-Profile-Label-toggle">
+                <label>Upload<input type="file" accept="image/*" /></label>
+                <label>Remove</label>
+            </div>
+        </div>
         <div class="BrokerConnect-Profile-Input">
             <label for="">Name</label>
-            <input type="text">
+            <input type="text" />
         </div>
         <div class="BrokerConnect-Profile-Input">
             <label for="">DOB</label>
-            <input type="date">
+            <input type="date" />
         </div>
         <div class="BrokerConnect-Profile-Input BrokerConnect-Profile-Input-Width-Half-1">
             <label for="">Mobile</label>
-            <input type="tel" maxlength="10">
+            <input type="tel" maxlength="10" />
         </div>
         <div class="BrokerConnect-Profile-Input BrokerConnect-Profile-Input-Width-Half-2">
             <label for="">Email</label>
-            <input type="email">
+            <input type="email" />
         </div>
         <div class="BrokerConnect-Profile-Input BrokerConnect-Profile-Input-Width-Full">
             <label for="">Address</label>
@@ -43,53 +72,53 @@
         <div>Listings</div>
         <div class="BrokerConnect-Home-Nav-filter">
             <div class="BrokerConnect-Home-Nav-filter-First"></div>
-            <div class=" BrokerConnect-Home-Nav-filter-Second"></div>
+            <div class="BrokerConnect-Home-Nav-filter-Second"></div>
             <div class="BrokerConnect-Home-Nav-filter-Third"></div>
         </div>
     </div>
     <section class="BrokerConnect-Home-Section">
-        <div class="BrokerConnect-Home-Housing-data"><img class="BrokerConnect-Home-Img"
-                src="../static/image/Dhiraj.jpg" alt="">
+        <div class="BrokerConnect-Home-Housing-data">
+            <img class="BrokerConnect-Home-Img" src="../static/image/Dhiraj.jpg" alt="" />
         </div>
-        <div class="BrokerConnect-Home-Housing-data"><img class="BrokerConnect-Home-Img"
-                src="../static/image/Dhiraj.jpg" alt="">
+        <div class="BrokerConnect-Home-Housing-data">
+            <img class="BrokerConnect-Home-Img" src="../static/image/Dhiraj.jpg" alt="" />
         </div>
-        <div class="BrokerConnect-Home-Housing-data"><img class="BrokerConnect-Home-Img"
-                src="../static/image/Dhiraj.jpg" alt="">
+        <div class="BrokerConnect-Home-Housing-data">
+            <img class="BrokerConnect-Home-Img" src="../static/image/Dhiraj.jpg" alt="" />
         </div>
-        <div class="BrokerConnect-Home-Housing-data"><img class="BrokerConnect-Home-Img"
-                src="../static/image/Dhiraj.jpg" alt="">
+        <div class="BrokerConnect-Home-Housing-data">
+            <img class="BrokerConnect-Home-Img" src="../static/image/Dhiraj.jpg" alt="" />
         </div>
-        <div class="BrokerConnect-Home-Housing-data"><img class="BrokerConnect-Home-Img"
-                src="../static/image/Dhiraj.jpg" alt="">
+        <div class="BrokerConnect-Home-Housing-data">
+            <img class="BrokerConnect-Home-Img" src="../static/image/Dhiraj.jpg" alt="" />
         </div>
-        <div class="BrokerConnect-Home-Housing-data"><img class="BrokerConnect-Home-Img"
-                src="../static/image/Dhiraj.jpg" alt="">
+        <div class="BrokerConnect-Home-Housing-data">
+            <img class="BrokerConnect-Home-Img" src="../static/image/Dhiraj.jpg" alt="" />
         </div>
-        <div class="BrokerConnect-Home-Housing-data"><img class="BrokerConnect-Home-Img"
-                src="../static/image/Dhiraj.jpg" alt="">
+        <div class="BrokerConnect-Home-Housing-data">
+            <img class="BrokerConnect-Home-Img" src="../static/image/Dhiraj.jpg" alt="" />
         </div>
-        <div class="BrokerConnect-Home-Housing-data"><img class="BrokerConnect-Home-Img"
-                src="../static/image/Dhiraj.jpg" alt="">
+        <div class="BrokerConnect-Home-Housing-data">
+            <img class="BrokerConnect-Home-Img" src="../static/image/Dhiraj.jpg" alt="" />
         </div>
-        <div class="BrokerConnect-Home-Housing-data"><img class="BrokerConnect-Home-Img"
-                src="../static/image/Dhiraj.jpg" alt="">
+        <div class="BrokerConnect-Home-Housing-data">
+            <img class="BrokerConnect-Home-Img" src="../static/image/Dhiraj.jpg" alt="" />
         </div>
-        <div class="BrokerConnect-Home-Housing-data"><img class="BrokerConnect-Home-Img"
-                src="../static/image/Dhiraj.jpg" alt="">
+        <div class="BrokerConnect-Home-Housing-data">
+            <img class="BrokerConnect-Home-Img" src="../static/image/Dhiraj.jpg" alt="" />
         </div>
     </section>
 
-    <div style="height: 51px;"></div>
+    <div style="height: 51px"></div>
     <footer class="BrokerConnect-Home-footer">
-        <ul>
-            <img src="../static/image/Search-1.png" alt="">
+        <a>
+            <img src="../static/image/Search-1.png" alt="" />
             <li>Listings</li>
-        </ul>
-        <ul>
-            <img src="../static/image/User-1.png" alt="">
+        </a>
+        <a>
+            <img src="../static/image/User-1.png" alt="" />
             <li>Profile</li>
-        </ul>
+        </a>
     </footer>
 </body>
 

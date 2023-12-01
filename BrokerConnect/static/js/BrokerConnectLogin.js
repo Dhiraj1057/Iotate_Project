@@ -5,12 +5,24 @@ document.addEventListener("readystatechange", function () {
     if (this.readyState === "interactive") {
         // code here
         document.querySelector(".BrokerConnect-Login-Sign-In-Section .BrokerConnect-Login-Sign-Out").addEventListener("click", (e) => {
-            document.querySelector(".BrokerConnect-Login-Sign-Out-Section").classList.remove("BrokerConnect-Login-Sign-Out-Section-Toggle")
+            document.querySelector(".BrokerConnect-Login-Sign-Out-Section").classList.remove("BrokerConnect-Login-Toggle")
             document.body.classList.add("body-overflow-hidden")
         })
         document.querySelector(".BrokerConnect-Login-Sign-Out-Section>div").addEventListener("click", (e) => {
-            document.querySelector(".BrokerConnect-Login-Sign-Out-Section").classList.add("BrokerConnect-Login-Sign-Out-Section-Toggle")
-            document.body.classList.remove("body-overflow-hidden")
+            document.querySelector(".BrokerConnect-Login-Sign-Out-Section").classList.add("BrokerConnect-Login-Toggle")
+            document.body.classList.remove("body-overflow-hidden");
+        })
+        document.querySelectorAll(".BrokerConnect-Login-Show-Password img").forEach(element => {
+            element.addEventListener("click", (e) => {
+                let toggleClassList = e.target.parentElement.querySelector("div").classList;
+                if (toggleClassList.contains("BrokerConnect-Login-Toggle")) {
+                    toggleClassList.remove("BrokerConnect-Login-Toggle")
+                    e.target.parentElement.parentElement.querySelector("input").setAttribute("type", "password");
+                } else {
+                    toggleClassList.add("BrokerConnect-Login-Toggle")
+                    e.target.parentElement.parentElement.querySelector("input").setAttribute("type", "text");
+                }
+            })
         })
 
         document.querySelector(".BrokerConnect-Login-Sign-In").addEventListener("click", (event) => {
@@ -31,13 +43,13 @@ document.addEventListener("readystatechange", function () {
                 statusCode: (e) => { console.log(e) }
             }).then(data => {
                 console.log(data)
-                if (data.message == "Logged In") {
+                if (data.message == "Logged In" || "No App") {
                     window.location.href = window.location.origin + data.home_page
                 }
             })
         });
 
-        document.querySelector(".BrokerConnect-Login-Sign-Out-Section .BrokerConnect-Login-Sign-Out").addEventListener("click", (event) => {
+        document.querySelector(".BrokerConnect-Login-Sign-Out-Section .BrokerConnect-Login-Sign-Out  ").addEventListener("click", (event) => {
             event.preventDefault();
             let input = document.querySelectorAll(".BrokerConnect-Login-Sign-Out-Section .BrokerConnect-Login-Input input, .BrokerConnect-Login-Sign-Out-Section .BrokerConnect-Login-Input textarea")
             var args = {};
@@ -60,7 +72,7 @@ document.addEventListener("readystatechange", function () {
                 freeze: true,
                 statusCode: (e) => { console.log(e) }
             }).then(data => {
-                document.querySelector(".BrokerConnect-Login-Sign-Out-Success").classList.remove("BrokerConnect-Login-Sign-Out-Section-Toggle")
+                document.querySelector(".BrokerConnect-Login-Sign-Out-Success").classList.remove("BrokerConnect-Login-Toggle")
                 document.body.classList.add("body-overflow-hidden")
                 document.querySelector(".BrokerConnect-Login-Sign-Out-Success div").textContent = data.message[1]
             })
@@ -69,3 +81,4 @@ document.addEventListener("readystatechange", function () {
         // code here
     }
 });
+
