@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/Base.css">
+    <link rel="stylesheet" href="../static/css/site.css">
+    <link href="https://use.fontawesome.com/releases/v6.4.0/css/all.css" rel="stylesheet" />
+    <script src="../static/js/Site.js"></script>
+    <title>Site</title>
+</head>
+
+<body>
+    <main class="FlareSens-main">
+        <section class="FlareSens-Section-2">
+            <article class="FlareSens-Article-1">
+                <div></div>
+            </article>
+        </section>
+
+        <section class="FlareSens-Section-3">
+            <div class="FlareSens-Scroll-Container">
+                <button onclick="scrollList('left')">&lt;</button>
+                <article>
+                    <button class="FlareSens-Button">
+                        <p>Floor 1</p>
+                    </button>
+                    <button class="FlareSens-Button">
+                        <p>Floor 2</p>
+                    </button>
+                    <button class="FlareSens-Button">
+                        <p>Floor 3</p>
+                    </button>
+                    <button class="FlareSens-Button">
+                        <p>Floor 4</p>
+                    </button>
+                    <button class="FlareSens-Button">
+                        <p>Floor 5</p>
+                    </button>
+                </article>
+                <button onclick="scrollList('right')">&gt;</button>
+            </div>
+
+            <article>
+                <button class="FlareSens-Button FlareSens-Button-Full">
+                    <p>Show Heatmap</p>
+                    <p class="FlareSens-Indicator">
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="blurDotWS">
+                                <path
+                                    d="M 12 6 A 6 6 0 0 0 6 12 A 6 6 0 0 0 12 18 A 6 6 0 0 0 18 12 A 6 6 0 0 0 12 6 z" />
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="dotWS">
+                                <path
+                                    d="M 12 6 A 6 6 0 0 0 6 12 A 6 6 0 0 0 12 18 A 6 6 0 0 0 18 12 A 6 6 0 0 0 12 6 z" />
+                            </svg>
+                        </span>
+                    </p>
+                </button>
+            </article>
+        </section>
+
+        <section class="FlareSens-Section-4">
+            <div>
+                <button type="button" onClick="window.location.href='tel:102'">
+                    <i class="fa-solid fa-house"></i>
+                    <p>Dashboard</p>
+                </button>
+            </div>
+            <div>
+                <button type="button" onClick="visitFloor('{{ event }}')">
+                    <i class="fa-solid fa-house-fire"></i>
+                    <p>Site</p>
+                </button>
+            </div>
+            <div>
+                <button type="button" onClick="gotomap('{{ event }}')">
+                    <i class="fa-solid fa-retweet"></i>
+                    <p>Updates</p>
+                </button>
+            </div>
+            <div class="FlareSens-RemoveBorder">
+                <button type="button" onClick="window.location.href = 'tel:+918683868231'">
+                    <i class="fas fa-phone"></i>
+                    <p>Call</p>
+                </button>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
