@@ -17,7 +17,7 @@
 }
 
 .FlareSens-Section-1>p {
-    padding: .5rem calc(16px + 1vw);
+    padding: .375rem calc(16px + 1vw);
     font-size: calc(25px + 0.8vw);
     font-weight: 800;
     background-color: var(--color-selection-light);
@@ -109,11 +109,12 @@
     margin-bottom: var(--buttom-shadow);
     padding: .5rem;
     box-shadow: 0px var(--buttom-shadow) 0px 0px #64748b;
-    border: 0;
+    border: none;
     border-radius: 0.25rem;
     color: #fff;
     background-color: rgb(71 85 105);
     transition: all ease 0.2s;
+    cursor: pointer;
 }
 
 .FlareSens-Button:hover {
@@ -168,9 +169,7 @@
     grid-template-columns: repeat(4, minmax(min-content, 1fr));
     border-radius: .5rem;
     background-image: linear-gradient(to top, #1f2937, #475569);
-    color: rgb(241 245 249);
     border: 1px solid white;
-    font-size: calc(14px + .3vw);
 }
 
 .FlareSens-Section-4>div {
@@ -181,11 +180,16 @@
     border-right: 1px solid white;
 }
 
+.FlareSens-Section-4>div.FlareSens-RemoveBorder {
+    border-right: none;
+}
+
 .FlareSens-Section-4>div>button {
-    font-size: 1rem;
+    font-size: calc(14px + .3vw);
     font-weight: 700;
     padding: 0.25rem;
     background-color: transparent;
+    color: rgb(241 245 249);
     border: none;
     outline: none;
 }

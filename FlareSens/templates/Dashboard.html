@@ -41,12 +41,10 @@
                 <p>Water Sources</p>
                 <p class="FlareSens-Indicator">
                     <span>
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-                            class="w-6 h-6 fill-green-400 blur-sm" id="blurDotWS">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="blurDotWS">
                             <path d="M 12 6 A 6 6 0 0 0 6 12 A 6 6 0 0 0 12 18 A 6 6 0 0 0 18 12 A 6 6 0 0 0 12 6 z" />
                         </svg>
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-                            class="w-6 h-6 fill-green-500 absolute top-0 z-10" id="dotWS">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="dotWS">
                             <path d="M 12 6 A 6 6 0 0 0 6 12 A 6 6 0 0 0 12 18 A 6 6 0 0 0 18 12 A 6 6 0 0 0 12 6 z" />
                         </svg>
                     </span>
@@ -56,27 +54,27 @@
 
         <section class="FlareSens-Section-4">
             <div>
-                <button type="button" onClick="window.location.href = 'tel:+918683868231'">
-                    <i class="fas fa-phone"></i>
-                    <p>Call</p>
-                </button>
-            </div>
-            <div>
                 <button type="button" onClick="window.location.href='tel:102'">
-                    <i class="fas fa-ambulance"></i>
-                    <p>Ambulance</p>
+                    <i class="fa-solid fa-house"></i>
+                    <p>Dashboard</p>
                 </button>
             </div>
             <div>
                 <button type="button" onClick="visitFloor('{{ event }}')">
-                    <i class="fas fa-layer-group"></i>
-                    <p>Floormap</p>
+                    <i class="fa-solid fa-house-fire"></i>
+                    <p>Site</p>
                 </button>
             </div>
             <div>
                 <button type="button" onClick="gotomap('{{ event }}')">
-                    <i class="fas fa-map-location-dot"></i>
-                    <p>Map</p>
+                    <i class="fa-solid fa-retweet"></i>
+                    <p>Updates</p>
+                </button>
+            </div>
+            <div class="FlareSens-RemoveBorder">
+                <button type="button" onClick="window.location.href = 'tel:+918683868231'">
+                    <i class="fas fa-phone"></i>
+                    <p>Call</p>
                 </button>
             </div>
         </section>
