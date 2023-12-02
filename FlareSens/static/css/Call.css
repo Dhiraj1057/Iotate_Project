@@ -40,7 +40,6 @@
     display: grid;
     gap: calc(3px + .4vw);
     align-content: baseline;
-    overflow-y: auto;
 }
 
 @media (min-width: 768px) {
