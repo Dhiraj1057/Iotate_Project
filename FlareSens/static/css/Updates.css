@@ -76,19 +76,19 @@
     font-weight: 100;
 }
 
-.FlareSens-Article-3 {
+.FlareSens-Section-2>.FlareSens-Article-3 {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 @media (min-width: 768px) {
-    .FlareSens-Article-3 {
+    .FlareSens-Section-2>.FlareSens-Article-3 {
         grid-column: span 2;
     }
 }
 
-.FlareSens-Article-3>input {
+.FlareSens-Section-2>.FlareSens-Article-3>input {
     padding: .5rem;
     background-color: rgb(71 85 105);
     border-radius: .25rem;
