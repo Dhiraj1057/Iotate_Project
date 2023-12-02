@@ -177,6 +177,7 @@
     align-items: center;
     justify-content: center;
     border-right: 1px solid white;
+    cursor: pointer;
 }
 
 .FlareSens-Section-4>div.FlareSens-RemoveBorder {
