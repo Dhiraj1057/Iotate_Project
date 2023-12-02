@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/Base.css">
+    <link rel="stylesheet" href="../static/css/Call.css">
+    <link href="https://use.fontawesome.com/releases/v6.4.0/css/all.css" rel="stylesheet" />
+    <script src="../static/js/Call.js"></script>
+    <title>Call</title>
+</head>
+
+<body>
+    <main class="FlareSens-main">
+        <section class="FlareSens-Section-1">
+            <p>Acknowledged</p>
+            <img src="https://via.placeholder.com/48x48" />
+        </section>
+
+        <section class="FlareSens-Section-2">
+            <article class="FlareSens-Article-1">
+                <div class="FlareSens-Heading">
+                    <p>Quick Call Menu</p>
+                </div>
+
+                <div class="FlareSens-List">
+                    <button type="button" onClick="window.location.href='tel:102'">
+                        <i class="fa-solid fa-house-fire"></i>
+                        <p>Call Site</p>
+                    </button>
+
+                    <button type="button" onClick="window.location.href='tel:102'">
+                        <i class="fa-solid fa-building"></i>
+                        <p>Call Station</p>
+                    </button>
+
+                    <button type="button" onClick="window.location.href='tel:102'">
+                        <i class="fa-solid fa-truck-medical"></i>
+                        <p>Call Ambulance</p>
+                    </button>
+
+                    <button type="button" onClick="window.location.href='tel:102'">
+                        <i class="fa-solid fa-building-shield"></i>
+                        <p>Call Police Station</p>
+                    </button>
+                </div>
+            </article>
+            <article class="FlareSens-Article-2">
+                <div class="FlareSens-Heading">
+                    <p>Crew Call Menu</p>
+                </div>
+
+                <div class="FlareSens-List">
+                    <button class="FlareSens-Button">
+                        <i class="fa-solid fa-phone"></i>
+                        <p>Avi Rajput</p>
+                    </button>
+                    <button class="FlareSens-Button">
+                        <i class="fa-solid fa-phone"></i>
+                        <p>Dhiraj Kumar</p>
+                    </button>
+                </div>
+            </article>
+        </section>
+
+        <section class="FlareSens-Section-4">
+            <div>
+                <button type="button" onClick="window.location.href='tel:102'">
+                    <i class="fa-solid fa-house"></i>
+                    <p>Dashboard</p>
+                </button>
+            </div>
+            <div>
+                <button type="button" onClick="visitFloor('{{ event }}')">
+                    <i class="fa-solid fa-house-fire"></i>
+                    <p>Site</p>
+                </button>
+            </div>
+            <div>
+                <button type="button" onClick="gotomap('{{ event }}')">
+                    <i class="fa-solid fa-retweet"></i>
+                    <p>Updates</p>
+                </button>
+            </div>
+            <div class="FlareSens-RemoveBorder">
+                <button type="button" onClick="window.location.href = 'tel:+918683868231'">
+                    <i class="fas fa-phone"></i>
+                    <p>Call</p>
+                </button>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
