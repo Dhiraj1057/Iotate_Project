@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../static/css/Base.css">
     <link rel="stylesheet" href="../static/css/site.css">
     <link href="https://use.fontawesome.com/releases/v6.4.0/css/all.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/heatmap.js/build/heatmap.min.js"></script>
     <script src="../static/js/Site.js"></script>
     <title>Site</title>
 </head>
@@ -15,13 +16,15 @@
     <main class="FlareSens-main">
         <section class="FlareSens-Section-2">
             <article class="FlareSens-Article-1">
-                <div></div>
+                <div id="heatmap-container">
+                    <img src="https://i.pinimg.com/originals/06/37/2c/06372cef20d89b57c58bdfc140710c70.png" alt="">
+                </div>
             </article>
         </section>
 
         <section class="FlareSens-Section-3">
             <div class="FlareSens-Scroll-Container">
-                <button onclick="scrollList('left')">&lt;</button>
+                <button onclick="scrollList('left')"><i class="fa-solid fa-backward"></i></button>
                 <article>
                     <button class="FlareSens-Button">
                         <p>Floor 1</p>
@@ -39,7 +42,7 @@
                         <p>Floor 5</p>
                     </button>
                 </article>
-                <button onclick="scrollList('right')">&gt;</button>
+                <button onclick="scrollList('right')"><i class="fa-solid fa-forward"></i></button>
             </div>
 
             <article>

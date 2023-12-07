@@ -34,3 +34,11 @@ body {
     background: var(--color-selection-light);
     color: var(--color-selection-dark);
 }
+
+p {
+    margin-bottom: 0;
+}
+
+svg {
+    vertical-align: initial;
+}
