@@ -31,11 +31,13 @@
 
 .FlareSens-Section-2>article>div>img {
     max-height: 70vh;
+    max-height: 70dvh;
 }
 
 @media (max-width: 768px) {
     .FlareSens-Section-2>article>div>img {
         max-height: 67vh;
+        max-height: 67dvh;
         width: 100%;
     }
 }
