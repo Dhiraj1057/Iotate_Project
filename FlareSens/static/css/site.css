@@ -89,11 +89,15 @@
     padding: .25rem;
     border-radius: .25rem;
     border: none;
-    display: flex;
+    display: none;
     align-items: baseline;
     justify-content: center;
     font-weight: 900;
     cursor: pointer;
+}
+
+.FlareSens-Scroll-Make-Visual {
+    display: flex !important;
 }
 
 .FlareSens-Scroll-Container>button:hover {
@@ -174,11 +178,19 @@
     filter: blur(.25rem);
 }
 
+svg.FlareSens-AddColor {
+    fill: #500000 !important;
+}
+
 .FlareSens-Indicator>span>svg:last-child {
     fill: #22c55e;
     position: absolute;
     left: 0;
     z-index: 10;
+}
+
+svg.FlareSens-BlurColor {
+    fill: #c90000 !important;
 }
 
 .FlareSens-Section-4 {

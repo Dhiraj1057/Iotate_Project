@@ -3,19 +3,32 @@
 class HeatMap {
     #heatmapContainer;
     #imageElement
+    #canvas
     #datapoint
     #heatmap;
     #isShow = true;
+    #cfg
     constructor(heatmapContainer) {
         this.#heatmapContainer = heatmapContainer;
         this.#imageElement = this.#heatmapContainer.querySelector("img")
-        let cfg = {
+        this.#cfg = {
             container: this.#heatmapContainer,
             radius: 20, // Adjust the radius as needed
+
         }
-        this.#heatmap = h337.create(cfg);
+        this.#heatmap = h337.create(this.#cfg);
+        this.#canvas = this.#heatmapContainer.querySelector("canvas:last-child");
         this.#autoUpdate()
         window.addEventListener("resize", () => this.#update())
+    }
+
+    changeConfig(cfg) {
+        for (const item in cfg) {
+            this.#cfg[item] = cfg[item]
+        }
+        this.#heatmap.configure(this.#cfg)
+        console.log(cfg)
+        this.#update
     }
 
     changeImage(imageElement) {
@@ -37,8 +50,8 @@ class HeatMap {
 
     #update() {
         let ratio = this.#imageElement.clientWidth / this.#imageElement.naturalWidth;
-        this.#heatmapContainer.querySelector("canvas").setAttribute("width", this.#imageElement.clientWidth);
-        this.#heatmapContainer.querySelector("canvas").setAttribute("height", this.#heatmapContainer.clientHeight);
+        this.#canvas.setAttribute("width", this.#imageElement.clientWidth);
+        this.#canvas.setAttribute("height", this.#heatmapContainer.clientHeight);
         let paddingHeight = (this.#heatmapContainer.clientHeight - this.#imageElement.clientHeight) / 2;
         let datapoint = [];
         if (this.#isShow) {
@@ -53,6 +66,26 @@ class HeatMap {
     }
 }
 
+class MultipleHeatMap {
+    constructor(heatmapContainer) {
+        let color = JSON.parse(heatmapContainer.querySelector("img").getAttribute("color").replace(/'/g, "\""))
+        this.heatmapList = JSON.parse(heatmapContainer.querySelector("img").getAttribute("data-point").replace(/'/g, "\"")).map((value, index) => {
+            let heatmap = new HeatMap(heatmapContainer);
+            heatmap.changeConfig({
+                gradient: {
+                    '1': color[index]
+                }
+            })
+            heatmap.changeDatapoint([value])
+            return heatmap;
+        })
+    }
+
+    toggle() {
+        this.heatmapList.forEach(value => value.toggle());
+    }
+}
+
 function scrollList(direction) {
     const scrollAmount = 200; // Adjust as needed
     const itemList = document.querySelector('.FlareSens-Scroll-Container>article');
@@ -64,15 +97,27 @@ function scrollList(direction) {
     }
 }
 
+function overflowHandler() {
+    let article = document.querySelector(".FlareSens-Scroll-Container>article");
+    if (article.clientWidth < article.scrollWidth) {
+        document.querySelectorAll(".FlareSens-Scroll-Container>button").forEach(value => {
+            value.classList.add("FlareSens-Scroll-Make-Visual")
+        })
+    }
+}
+
 document.addEventListener("readystatechange", function () {
     console.log("readystatechange: " + this.readyState);
     if (this.readyState === "interactive") {
         // code here
     } else if (this.readyState === "complete") {
         // code here
-        let heatmap = new HeatMap(document.querySelector("#heatmap-container"));
+        overflowHandler();
+        let multipleHeatMap = new MultipleHeatMap(document.querySelector("#heatmap-container"))
         document.querySelector(".FlareSens-Button-Full").addEventListener("click", () => {
-            heatmap.toggle()
+            multipleHeatMap.toggle();
+            document.querySelector(".FlareSens-Indicator>span>svg:first-child").classList.toggle("FlareSens-AddColor");
+            document.querySelector(".FlareSens-Indicator>span>svg:last-child").classList.toggle("FlareSens-BlurColor");
         })
     }
 });
