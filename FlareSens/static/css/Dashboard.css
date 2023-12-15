@@ -62,8 +62,9 @@
     }
 }
 
-.FlareSens-Section-2>.FlareSens-Article-1>div {
+.FlareSens-Section-2>.FlareSens-Article-1>iframe {
     height: 100%;
+    width: 100%;
 }
 
 .FlareSens-Section-2>.FlareSens-Article-2 {
@@ -153,15 +154,23 @@
 }
 
 .FlareSens-Indicator>span>svg:first-child {
-    fill: #4ade80;
+    fill: #500000;
     filter: blur(.25rem);
 }
 
+svg.FlareSens-AddColor {
+    fill: #4ade80 !important;
+}
+
 .FlareSens-Indicator>span>svg:last-child {
-    fill: #22c55e;
+    fill: #c90000;
     position: absolute;
     left: 0;
     z-index: 10;
+}
+
+svg.FlareSens-BlurColor {
+    fill: #22c55e !important;
 }
 
 .FlareSens-Section-4 {

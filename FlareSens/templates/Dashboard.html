@@ -20,13 +20,14 @@
 
         <section class="FlareSens-Section-2">
             <article class="FlareSens-Article-1">
-                <div id="wemap" data-cord="{{ project.location_coordinates }}"></div>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14027.989845389739!2d77.3037217!3d28.4796231!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cddead80e06c3%3A0xd03cfdf82b0b5835!2sSterling%20Gtake%20E-Mobility%20Ltd.!5e0!3m2!1sen!2sin!4v1702193564662!5m2!1sen!2sin"
+                    id="map" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </article>
 
             <article class="FlareSens-Article-2">
                 <p id="address" data-address="{{ project.site_address }}">
-                    Address - Vikas Mall ITBP Rd, Indira Nagar Colony Rd, Vasant
-                    Vihar, Dehradun, Uttarakhand 248001
+                    Address - 12/2, NH-19, Sector 27, Faridabad, Haryana 121003
                 </p>
                 <p>Type - Commercial</p>
             </article>
@@ -54,25 +55,25 @@
 
         <section class="FlareSens-Section-4">
             <div>
-                <button type="button" onClick="window.location.href='tel:102'">
+                <button type="button" onClick="window.location.href='/dashboard'">
                     <i class="fa-solid fa-house"></i>
                     <p>Dashboard</p>
                 </button>
             </div>
             <div>
-                <button type="button" onClick="visitFloor('{{ event }}')">
+                <button type="button" onClick="window.location.href='/site'">
                     <i class="fa-solid fa-house-fire"></i>
                     <p>Site</p>
                 </button>
             </div>
             <div>
-                <button type="button" onClick="gotomap('{{ event }}')">
+                <button type="button" onClick="window.location.href='/update'">
                     <i class="fa-solid fa-retweet"></i>
                     <p>Updates</p>
                 </button>
             </div>
             <div class="FlareSens-RemoveBorder">
-                <button type="button" onClick="window.location.href = 'tel:+918683868231'">
+                <button type="button" onClick="window.location.href = '/call'">
                     <i class="fas fa-phone"></i>
                     <p>Call</p>
                 </button>
